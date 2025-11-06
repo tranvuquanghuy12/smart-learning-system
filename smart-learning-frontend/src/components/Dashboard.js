@@ -23,18 +23,18 @@ export default function Dashboard({ studentId, studentName }) {
 
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:5000/api/progress/${studentId}`).then((res) => {
+    axios.get(`https://smart-learning-system.onrender.com/api/progress/${studentId}`).then((res) => {
       setProgressData(res.data);
       const avg =
         res.data.reduce((acc, item) => acc + item.progress, 0) / res.data.length;
       setAverage(avg.toFixed(1));
     });
 
-    axios.get(`http://127.0.0.1:5000/api/insight`).then((res) => {
+    axios.get(`https://smart-learning-system.onrender.com/api/insight`).then((res) => {
       setInsights(res.data.insights);
     });
 
-    axios.get(`http://127.0.0.1:5000/api/predict/${studentId}`).then((res) => {
+    axios.get(`https://smart-learning-system.onrender.com/api/predict/${studentId}`).then((res) => {
       setPredictions(res.data.predictions);
     });
 

@@ -21,7 +21,7 @@ export default function SchedulePage({ studentId, studentName }) {
     // 1. GỌI API ĐÚNG
     // API này (trong app.py) đã được thiết kế để trả về dữ liệu môn học hiện tại
     axios
-      .get(`http://127.0.0.1:5000/api/current-schedule/${studentId}`)
+      .get(`https://smart-learning-system.onrender.com/api/current-schedule/${studentId}`)
       .then((res) => {
         // 2. ÁP DỤNG LOGIC SỬA LỖI UNICODE TIẾNG VIỆT
         const fixedData = JSON.parse(

@@ -11,7 +11,7 @@ export default function Recommendation({ studentId, studentName }) {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:5000/api/recommendation/${studentId}`)
+      .get(`https://smart-learning-system.onrender.com/api/recommendation/${studentId}`)
       .then((res) => {
         // API trả dữ liệu JSON, có thể chứa mã Unicode \uXXXX → parse lại để hiển thị tiếng Việt đúng
         const fixedData = JSON.parse(
