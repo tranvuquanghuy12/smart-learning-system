@@ -12,7 +12,7 @@ export default function Login({ onLoginSuccess }) {
     setError("");
 
     try {
-      const res = await axios.post("http://127.0.0.1:5000/api/login", {
+      const res = await axios.post("https://smart-learning-system.onrender.com/api/login", {
         student_id: studentId,
         password: password, // <-- 2. Gửi mật khẩu đi
       });

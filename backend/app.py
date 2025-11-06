@@ -7,6 +7,7 @@ import sqlite3
 import time 
 from io import StringIO
 
+
 # IMPORT CÁC MODULE MỚI 
 from tlu_api import (
     authenticate_tlu, 
@@ -25,6 +26,7 @@ from recommender import (
 app = Flask(__name__)
 CORS(app)
 
+CORS(app, origins=["https://smart-learning-system-hz6mzo0zf-tranvuquanghuy12s-projects.vercel.app"])
 import sqlite3
 import time
 import json
